@@ -1,0 +1,9 @@
+INFO:     Started server process [3436]
+INFO:     Waiting for application startup.
+2026-10-11 07:48:01,141 | INFO | backend.app.main | Starting up – loading model...
+2026-10-11 07:48:01,142 | INFO | backend.app.predictor | Loading model from: C:\Users\talas\Downloads\churn_ml_project\backend\models\churn_model_v1.0.0.joblib
+2026-10-11 07:48:01,344 | INFO | backend.app.predictor | Model loaded successfully
+2026-10-11 07:48:01,346 | INFO | backend.app.predictor | Metadata loaded successfully
+2026-10-11 07:48:01,347 | INFO | backend.app.main | Model loaded and ready
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)

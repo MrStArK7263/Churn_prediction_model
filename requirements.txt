@@ -1,0 +1,13 @@
+# Churn ML Project – Training Requirements
+# Used for the notebook and src/train.py
+# Pinned to exact versions for reproducibility
+
+pandas==2.1.4
+numpy==1.26.4
+scikit-learn==1.2.2
+matplotlib==3.8.3
+seaborn==0.13.2
+joblib==1.3.2
+xgboost==2.0.3
+notebook>=7.0.0
+ipykernel>=6.0.0

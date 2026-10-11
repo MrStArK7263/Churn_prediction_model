@@ -1,0 +1,37 @@
+# Render Blueprint
+# This file lets Render deploy both services automatically
+# when you connect the GitHub repository.
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  # ── Backend API ────────────────────────────────────────────────────────────
+  - type: web
+    name: churn-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: "10000"    # Render internally uses 10000 for Docker services
+      - key: MODEL_VERSION
+        value: "1.0.0"
+      - key: LOG_LEVEL
+        value: "INFO"
+      - key: ALLOWED_ORIGINS
+        value: "*"        # replace with your Streamlit URL after deployment
+
+  # ── Frontend Streamlit ─────────────────────────────────────────────────────
+  - type: web
+    name: churn-frontend
+    runtime: docker
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: API_URL
+        fromService:
+          name: churn-backend
+          type: web
+          property: host     # Render auto-fills the backend URL here
