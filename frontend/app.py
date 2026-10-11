@@ -43,7 +43,7 @@ st.markdown("""
                   padding: 1rem; border-radius: 8px; }
     .nochurn-box{ background: #21C35422; border-left: 4px solid #21C354;
                   padding: 1rem; border-radius: 8px; }
-    .factor-item{ background: #F0F2F6; padding: 0.5rem 0.75rem;
+    .factor-item{ background: #4F8BF922; Border-left: 4px solid #4F8BF9; padding: 0.5rem 0.75rem;
                   border-radius: 6px; margin-bottom: 0.4rem; font-size: 0.9rem; }
     .section-header { font-size: 1.1rem; font-weight: 700;
                       color: #4F8BF9; margin-top: 1rem; }
